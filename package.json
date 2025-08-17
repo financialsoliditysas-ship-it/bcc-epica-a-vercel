@@ -1,0 +1,14 @@
+{
+  "name": "bcc-epica-a-vercel",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@upstash/redis": "^1.31.6",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.5.4"
+  }
+}
