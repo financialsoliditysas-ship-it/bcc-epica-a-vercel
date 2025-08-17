@@ -1,7 +1,10 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getState, setState, clearState } from "../../../src/lib/state";
-import { sendText, askButtons } from "../../../src/lib/wa";
-import { registerSeller } from "../../../src/lib/wp";
+// Adjust import paths to correctly resolve modules from the API route. Each route lives under
+// `api/webhooks`, so to reach the project root we traverse two directories (`../../`). From there we
+// access `src/lib`, which houses our state, WhatsApp, and WordPress helpers.
+import { getState, setState, clearState } from "../../src/lib/state";
+import { sendText, askButtons } from "../../src/lib/wa";
+import { registerSeller } from "../../src/lib/wp";
 
 const VERIFY_TOKEN = process.env.VERIFY_TOKEN!;
 
